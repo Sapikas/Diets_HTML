@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,700&display=swap" rel="stylesheet">
+    <link href="css/normalize.css" rl="stylesheet">
+    <link href="css/small.css" rel="stylesheet">
+    <link href="css/medium.css" rel="stylesheet">
+    <link href="css/large.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#"><i class="fas fa-user-plus"></i></a>
+        </nav>
+    </header>
+
+    <aside>
+        <img src="./photos/TheSocialClub_06.jpg" alt="logo" width="300px">
+        <input type="text" placeholder="Αναζήτηση.." onkeyup="sendData(this)">
+    </aside>
+
+    <main>
+        <section class="main">
+            <article>
+                <img src="photos/TheSocialClub_06.jpg" alt="" width="300px">
+                <div>
+                    <h3>Diet Agency 1</h3>
+                    <p>Athens</p>
+                </div>
+            </article>
+            <article>
+                <img src="photos/TheSocialClub_06.jpg" alt="" width="300px">
+                <div>
+                    <h3>Diet Agency 1</h3>
+                    <p>Athens</p>
+                </div></article>
+            <article>
+                <img src="photos/TheSocialClub_06.jpg" alt="" width="300px">
+                <div>
+                    <h3>Diet Agency 1</h3>
+                    <p>Athens</p>
+                </div>
+            </article>
+            <article>
+                <img src="photos/TheSocialClub_06.jpg" alt="" width="300px">
+                <div>
+                    <h3>Diet Agency 1</h3>
+                    <p>Athens</p>
+                </div>
+            </article>
+            <article>
+                <img src="photos/TheSocialClub_06.jpg" alt="" width="300px">
+                <div>
+                    <h3>Diet Agency 1</h3>
+                    <p>Athens</p>
+                </div>
+            </article>
+            <article>
+                <img src="photos/TheSocialClub_06.jpg" alt="" width="300px">
+                <div>
+                    <h3>Diet Agency 1</h3>
+                    <p>Athens</p>
+                </div>
+            </article>
+            <article>
+                <img src="photos/TheSocialClub_06.jpg" alt="" width="300px">
+                <div>
+                    <h3>Diet Agency 1</h3>
+                    <p>Athens</p>
+                </div>
+            </article>
+            <article>
+                <img src="photos/TheSocialClub_06.jpg" alt="" width="300px">
+                <div>
+                    <h3>Diet Agency 1</h3>
+                    <p>Athens</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <div class="navbar">
+        <a href="#">Αρχική</a>
+        <a href="#">Δίαιτες</a>
+        <a href="#">Προφιλ</a>
+    </div>
+
+    <footer>
+        <div>
+            <img src="photos/TheSocialClub_06.jpg" alt="" width="200px">
+            <p>Social Club</p>
+        </div>
+        <div>
+            <h4>About</h4>
+            <ul>
+                <li>List 1</li>
+                <li>List 2</li>
+                <li>List 3</li>
+                <li>List 4</li>
+            </ul>
+        </div>
+        <div>
+            <h4>About</h4>
+            <ul>
+                <li>List 1</li>
+                <li>List 2</li>
+                <li>List 3</li>
+                <li>List 4</li>
+            </ul>
+        </div>
+        <div>
+            <h4>About</h3>
+            <ul>
+                <li>List 1</li>
+                <li>List 2</li>
+                <li>List 3</li>
+                <li>List 4</li>
+            </ul>
+        </div>
+        <div class="copy">
+            &copy; 2022 DSconstruction
+        </div>
+    </footer>
+
+    <script>
+        function sendData(e){
+            fetch("http://localhost:3000/api/v1/dietAgencies/search", {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({payload: e.value})
+            }).then(res=> res.json())
+            .then(data=>{
+                let payload = data.payload
+                console.log(payload);
+            })
+            .catch(err=> console.log(err))
+          }
+    </script>
+</body>
+</html>

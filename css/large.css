@@ -1,0 +1,58 @@
+@media only screen and (min-width: 1024px) {
+    
+    main > section {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1em;
+    }
+
+    #login{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 200px 50px;
+        margin: 1rem auto 2rem auto;
+        height: 250px;
+        grid-gap: 0;
+    }
+
+    .after-login-form{
+        width: 100%;
+    }
+  
+    footer{
+        grid-template-columns: repeat(4,1fr);
+        /* grid-template-rows: 150px 10px;  */
+        grid-template-rows: auto;
+    }
+
+    footer p{
+        text-align: center;
+    }
+
+    .copy{
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+
+    .info{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    } 
+
+    .info i {
+        margin: 0 10px;
+    }
+
+    div > form > input, textarea{
+        width: 500px;
+    }
+
+    div > form > input[type=submit]{
+        width: 400px;
+    }
+
+    aside img{
+        width: 400px;
+    }
+    
+} /* end of media query */

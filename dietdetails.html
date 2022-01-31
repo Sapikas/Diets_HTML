@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Details</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,700&display=swap" rel="stylesheet">
+    <link href="css/normalize.css" rl="stylesheet">
+    <link href="css/small.css" rel="stylesheet">
+    <link href="css/medium.css" rel="stylesheet">
+    <link href="css/large.css" rel="stylesheet">
+</head>
+<body>
+
+    <main>
+        <div class="subnav">
+            <h3>Πρωινό</h3>
+            <div class="subnav-content">
+                <ul id="myUL">
+                    <li>Hit the gym</li>
+                    <li>Pay bills</li> <!--class="checked"-->
+                    <li>Read a book</li>
+                    <li>Organize office</li>
+                </ul>
+            </div>
+        </div>
+        <div class="subnav">
+            <h3>Δεκατιανό</h3>
+            <div class="subnav-content">
+                <ul id="myUL">
+                    <li>Hit the gym</li>
+                    <li>Pay bills</li> <!--class="checked"-->
+                    <li>Read a book</li>
+                    <li>Organize office</li>
+                </ul>
+            </div>
+        </div>
+        <div class="subnav">
+            <h3>Μεσημεριανό</h3>
+            <div class="subnav-content">
+                <ul id="myUL">
+                    <li>Hit the gym</li>
+                    <li>Pay bills</li> <!--class="checked"-->
+                    <li>Read a book</li>
+                    <li>Organize office</li>
+                </ul>
+            </div>
+        </div>
+        <div class="subnav">
+            <h3>Βραδινό</h3>
+            <div class="subnav-content">
+                <ul id="myUL">
+                    <li>Hit the gym</li>
+                    <li>Pay bills</li> <!--class="checked"-->
+                    <li>Read a book</li>
+                    <li>Organize office</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <div class="navbar">
+        <a href="#">Αρχική</a>
+        <a href="#">Δίαιτες</a>
+        <a href="#">Προφιλ</a>
+    </div>
+
+    <footer>
+        <div>
+            <img src="photos/TheSocialClub_06.jpg" alt="" width="200px">
+            <p>Social Club</p>
+        </div>
+        <div>
+            <h4>About</h4>
+            <ul>
+                <li>List 1</li>
+                <li>List 2</li>
+                <li>List 3</li>
+                <li>List 4</li>
+            </ul>
+        </div>
+        <div>
+            <h4>About</h4>
+            <ul>
+                <li>List 1</li>
+                <li>List 2</li>
+                <li>List 3</li>
+                <li>List 4</li>
+            </ul>
+        </div>
+        <div>
+            <h4>About</h3>
+            <ul>
+                <li>List 1</li>
+                <li>List 2</li>
+                <li>List 3</li>
+                <li>List 4</li>
+            </ul>
+        </div>
+        <div class="copy">
+            &copy; 2022 DSconstruction
+        </div>
+    </footer>
+
+    <script>
+        // var myNodelist = document.getElementsByTagName("LI");
+        // var i;
+        // for (i = 0; i < myNodelist.length; i++) {
+        // var span = document.createElement("SPAN");
+        // var txt = document.createTextNode("\u00D7");
+        // span.className = "close";
+        // span.appendChild(txt);
+        // myNodelist[i].appendChild(span);
+        // }
+
+        // Click on a close button to hide the current list item
+        // var close = document.getElementsByClassName("close");
+        // var i;
+        // for (i = 0; i < close.length; i++) {
+        // close[i].onclick = function() {
+        //     var div = this.parentElement;
+        //     div.style.display = "none";
+        // }
+        // }
+
+        // Add a "checked" symbol when clicking on a list item
+        var list = document.querySelectorAll('ul');
+        for (let i = 0; i <= list.length; i++){
+            list[i].addEventListener('click', function(ev){
+                if (ev.target.tagName === 'LI') {
+                console.log("class");
+                    ev.target.classList.toggle('checked');
+                }
+            }, false)
+        }
+
+        //Create a new list item when clicking on the "Add" button
+        // function newElement() {
+        // var li = document.createElement("li");
+        // var inputValue = document.getElementById("myInput").value;
+        // var t = document.createTextNode(inputValue);
+        // li.appendChild(t);
+        // if (inputValue === '') {
+        //     alert("You must write something!");
+        // } else {
+        //     document.getElementById("myUL").appendChild(li);
+        // }
+        // document.getElementById("myInput").value = "";
+
+        // var span = document.createElement("SPAN");
+        // var txt = document.createTextNode("\u00D7");
+        // span.className = "close";
+        // span.appendChild(txt);
+        // li.appendChild(span);
+
+        // for (i = 0; i < close.length; i++) {
+        //     close[i].onclick = function() {
+        //     var div = this.parentElement;
+        //     div.style.display = "none";
+        //     }
+        // }
+        // }
+    </script>
+</body>
+</html>

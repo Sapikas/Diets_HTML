@@ -1,0 +1,25 @@
+@media only screen and (min-width: 768px) {
+    
+    main > section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    footer{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .copy{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    footer > div{
+        justify-self: center;
+    }
+
+    footer p{
+        text-align: center;
+    }
+    
+    
+} /* end of media query */
