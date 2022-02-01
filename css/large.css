@@ -64,9 +64,12 @@
         grid-template-columns: repeat(4,1fr);
         /* grid-template-rows: 150px 10px;  */
         grid-template-rows: auto;
-        position: absolute; 
+        /* position: absolute; 
         bottom: 0;
-        margin: 45px 0;
+        margin: 45px 0; */
+        clear: both;
+        position: relative;
+        height: 200px;
     }
 
     footer p{
