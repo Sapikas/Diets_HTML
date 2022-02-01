@@ -1,7 +1,79 @@
+:root {
+    /* dark shades of primary color*/
+    --clr-primary-1: hsl(205, 86%, 17%);
+    --clr-primary-2: hsl(205, 77%, 27%);
+    --clr-primary-3: hsl(205, 72%, 37%);
+    --clr-primary-4: hsl(205, 63%, 48%);
+    /* primary/main color */
+    --clr-primary-5: #49a6e9;
+    /* lighter shades of primary color */
+    --clr-primary-6: hsl(205, 89%, 70%);
+    --clr-primary-7: hsl(205, 90%, 76%);
+    --clr-primary-8: hsl(205, 86%, 81%);
+    --clr-primary-9: hsl(205, 90%, 88%);
+    --clr-primary-10: hsl(205, 100%, 96%);
+    /* darkest grey - used for headings */
+    --clr-grey-1: hsl(209, 61%, 16%);
+    --clr-grey-2: hsl(211, 39%, 23%);
+    --clr-grey-3: hsl(209, 34%, 30%);
+    --clr-grey-4: hsl(209, 28%, 39%);
+    /* grey used for paragraphs */
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-grey-6: hsl(209, 23%, 60%);
+    --clr-grey-7: hsl(211, 27%, 70%);
+    --clr-grey-8: hsl(210, 31%, 80%);
+    --clr-grey-9: hsl(212, 33%, 89%);
+    --clr-grey-10: hsl(210, 36%, 96%);
+    --clr-white: #fff;
+    --clr-red-dark: hsl(360, 67%, 44%);
+    --clr-red-light: hsl(360, 71%, 66%);
+    --clr-green-dark: hsl(125, 67%, 44%);
+    --clr-green-light: hsl(125, 71%, 66%);
+    --clr-black: #222;
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.25rem;
+    --radius: 0.5rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+}
+
 body{
     margin: 1rem;
     background-color: #F0F2F5;
+    /* min-height: 100vh; */
 }
+
+/*Start Tooltip*/
+#tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+#tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+}
+
+#tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+/*End Tooltip*/
 
 nav > a {
     display: flex;
@@ -29,6 +101,11 @@ aside > input{
     background-color: #fff;
 }
 
+.left-logo{
+    align-self: flex-start;
+    width: 100px !important;
+}
+
 #login{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -39,6 +116,19 @@ aside > input{
     margin: 1rem 1rem 2rem 1rem;
     text-align: center;
 } 
+
+#register{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 220px 200px 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    height: 470px;
+    margin: 1rem 1rem 2rem 1rem;
+    padding-top: 1rem;
+    text-align: center;
+    position: relative;
+}
 
 .login-form input{
     margin-bottom: 1rem;
@@ -57,14 +147,27 @@ aside > input{
     color: white;
 }
 
+.after-register-form{
+    position: absolute;
+    bottom: 0;
+    background-color: gray !important;
+    width: 100%;
+    color: white;
+}
+
 main > section {
     max-width: 1200px;
     margin: 1rem auto;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     align-items: center;
-    padding-left: 10px;
+    /* padding-left: 10px; */
     border-radius: 10px;
+}
+
+main a {
+    text-decoration: none;
+    color: black;
 }
 
 .dietSection{
@@ -85,29 +188,39 @@ main > section {
 
 main > section > article {
     justify-self: center;
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
-article > img{
+article > a > img{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
-article > div {
+article > a > div {
     background-color: #fff;
     margin-top: -23px;
     padding: 0.5rem;
 }
 
 footer{
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(1,1fr); 
     /*grid-template-rows: 150px 10px; */
-    margin: 50px 0;
+    margin: 55px 0;
 }
 
 div > img{
     border-radius: 60px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+#social-media{
+    font-size: 20px;
 }
 
 /*Start of DietAgency.html*/
@@ -165,13 +278,15 @@ div > form > input[type=submit]{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     margin-left: -15px;
-    height: 40px;
+    height: 50px;
+    z-index: 1;
 }
 
 .navbar a {
     justify-self: center;
     align-self: center;
     text-decoration: none;
+    color: black;
 }
 
 /*End bottom navMenu*/
@@ -246,3 +361,200 @@ div > form > input[type=submit]{
 }
 
 /*End Diet Details*/
+
+/*Start SuccessSubmission*/
+
+.inner-section img{
+    width: 20vh;
+} 
+
+/*End Start SuccessSubmission*/
+
+/**/
+
+/*Start Profile*/
+
+.center-logo{
+    width: 150px !important;
+}
+
+.profile{
+    background-color: white;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px 30px 10px 30px;
+}
+
+.profile button{
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+button a{ 
+    color: white;
+}
+/*End Profile*/
+
+/*start profile diet agency */
+.diet-agency-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.2rem;
+    font-size: 12px;
+    margin-bottom: 1rem;
+}
+/*End profile diet agency*/
+
+/*Start Add New Diet*/
+
+.section-center {
+    background: var(--clr-white);
+    border-radius: var(--radius);
+    box-shadow: var(--light-shadow);
+    transition: var(--transition);
+    padding: 2rem;
+  }
+  .section-center:hover {
+    box-shadow: var(--dark-shadow);
+  }
+  .alert {
+    margin-bottom: 1rem;
+    height: 1.25rem;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    font-size: 0.7rem;
+    border-radius: 0.25rem;
+    letter-spacing: var(--spacing);
+    text-transform: capitalize;
+  }
+  .alert-danger {
+    color: #721c24;
+    background: #f8d7da;
+  }
+  .alert-success {
+    color: #155724;
+    background: #d4edda;
+  }
+  .grocery-form h3 {
+    color: var(--clr-primary-1);
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .form-control {
+    display: flex;
+    justify-content: center;
+  }
+  #grocery {
+    padding: 0.25rem;
+    padding-left: 1rem;
+    background: var(--clr-grey-10);
+    border-top-left-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
+    border-color: transparent;
+    font-size: 1rem;
+    flex: 1 0 auto;
+    color: var(--clr-grey-5);
+  }
+  #grocery::placeholder {
+    font-family: var(--ff-secondary);
+    color: var(--clr-grey-5);
+  }
+  .submit-btn {
+    background: var(--clr-primary-8);
+    border-color: transparent;
+    flex: 0 0 5rem;
+    display: grid;
+    align-items: center;
+    padding: 0.25rem;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    border-top-right-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+    cursor: pointer;
+    content: var(--clr-primary-5);
+    transition: var(--transition);
+    font-size: 0.85rem;
+  }
+  .submit-btn:hover {
+    background: var(--clr-primary-5);
+    color: var(--clr-white);
+  }
+  
+  .grocery-container {
+    margin-top: 2rem;
+    transition: var(--transition);
+    visibility: hidden;
+  }
+  .show-container {
+    visibility: visible;
+  }
+  .grocery-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    transition: var(--transition);
+    padding: 0.25rem 1rem;
+    border-radius: var(--radius);
+    text-transform: capitalize;
+  }
+  .grocery-item:hover {
+    color: var(--clr-grey-5);
+    background: var(--clr-grey-10);
+  }
+  .grocery-item:hover .title {
+    color: var(--clr-grey-5);
+  }
+  .title {
+    margin-bottom: 0;
+    color: var(--clr-grey-1);
+    letter-spacing: 2px;
+    transition: var(--transition);
+  }
+  .edit-btn,
+  .delete-btn {
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    font-size: 0.7rem;
+    margin: 0 0.15rem;
+    transition: var(--transition);
+  }
+  .edit-btn {
+    color: var(--clr-green-light);
+  }
+  .edit-btn:hover {
+    color: var(--clr-green-dark);
+  }
+  .delete-btn {
+    color: var(--clr-red-light);
+  }
+  .delete-btn:hover {
+    color: var(--clr-red-dark);
+  }
+  .clear-btn {
+    text-transform: capitalize;
+    width: 10rem;
+    height: 1.5rem;
+    display: grid;
+    align-items: center;
+    background: transparent;
+    border-color: transparent;
+    color: var(--clr-red-light);
+    margin: 0 auto;
+    font-size: 0.85rem;
+    letter-spacing: var(--spacing);
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 1.25rem;
+  }
+  .clear-btn:hover {
+    color: var(--clr-red-dark);
+  }
+/*End Add New Diet*/

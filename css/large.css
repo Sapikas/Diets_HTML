@@ -1,8 +1,20 @@
 @media only screen and (min-width: 1024px) {
+
+    body{
+        position: relative;
+    }
+
+    main{
+        min-height: 100vh;
+    }
     
     main > section {
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 1em;
+    }
+
+    main > section > article{
+        margin: 2rem 0;
     }
 
     #login{
@@ -13,14 +25,48 @@
         grid-gap: 0;
     }
 
+    #register{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 200px 50px;
+        margin: 1rem auto 2rem auto;
+        padding-top: 2rem;
+        height: 300px;
+        grid-gap: 0;
+    }
+
+    .center-logo{
+        width: 250px !important;
+    }
+
     .after-login-form{
         width: 100%;
     }
-  
+
+    .after-register-form{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        background-color: gray !important;
+        width: 100%;
+        
+        color: white;
+    }
+    
+    .left-logo{
+        align-self: flex-start;
+        width: 150px !important;
+    }
+
+    .profile{
+        width: 50%;
+    }
+
     footer{
         grid-template-columns: repeat(4,1fr);
         /* grid-template-rows: 150px 10px;  */
         grid-template-rows: auto;
+        position: absolute; 
+        bottom: 0;
+        margin: 45px 0;
     }
 
     footer p{

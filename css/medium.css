@@ -13,6 +13,10 @@
         grid-column-end: 3;
     }
 
+    .profile{
+        width: 70%;
+    }
+
     footer > div{
         justify-self: center;
     }
